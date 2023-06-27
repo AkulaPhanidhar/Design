@@ -1,38 +1,376 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Rubik:wght@300;400;500;600&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #0E1014;
+  font-family: 'Rubik', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Navbar Section Start */
+.navbar {
+    width: 100%;
+    padding: 20px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(5px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+    color: #E8EAF0;
+    font-size: xx-large;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navLinksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.navLinks {
+    position: relative;
+    color: #E8EAF0;
+    font-size: small;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+    transition: 0.3s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navLinks:hover {
+    transform: translateY(-5px);
+    color: aqua;
+}
+
+.navLinks::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background: #E8EAF0;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+}
+
+.navLinks:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+    background: aqua;
+}
+
+.button {
+    padding: 13px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 1px;
+    color: #E8EAF0;
+    font-size: small;
+    font-weight: 500;
+    border: 1px solid #E8EAF0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.3s linear;
+}
+
+#button {
+  width: 100%;
+}
+
+.button:hover {
+    background: #E8EAF0;
+    color: #0E1014;
+    transform: translateY(-5px);
+}
+
+#active {
+    position: relative;
+    color: aqua;
+    font-size: small;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+}
+
+#active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background: aqua;
+    border-radius: 5px;
+}
+/* Navbar Section End */
+
+
+/* Credentials Section Start */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.backButton {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    border: none;
+    padding: 8px;
+    border-radius: 50px;
+    background: #E8EAF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+.backButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px #E8EAF0;
+}
+
+.arrow {
+    background: transparent;
+}
+
+.arrow:hover {
+    animation: rotate 0.3s linear;
+}
+
+.login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginContainer {
+    padding: 20px;
+    height: 70%;
+    width: 70%;
+    border-radius: 20px;
+    background: #13151d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.loginText {
+    color: #E8EAF0;
+    font-size: xx-large;
+    font-weight: 500;
+    background: transparent;
+}
+
+.inputContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+}
+
+.nameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+}
+
+.loginInput {
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    color: #E8EAF0;
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #E8EAF0;
+}
+
+.loginInput::placeholder {
+    color: #E8EAF0;
+    opacity: 0.7;
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* .loginInput {
+    width: 100%;
+    padding: 12px 20px;
+    background: #E8EAF0;
+    border-radius: 5px;
+    color: #13151d;
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+.loginInput::placeholder {
+    color: #13151d;
+    opacity: 0.7;
+    font-size: medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+} */
+
+.passwordContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    background: transparent;
+}
+
+.buttonContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+}
+
+.account {
+    cursor: pointer;
+    color: #E8EAF0;
+    font-size: small;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+.link {
+    color: aqua;
+    text-decoration: none;
+    background: transparent;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+#link {
+    font-size: small;
+}
+/* Credentials Section End */
+
+
+/* Hero Section Start */
+.hero {
+    padding: 30px 100px;
+}
+
+.heroContainer {
+    width: 100%;
+    height: 70vh;
+    background: #13151d;
+    border-radius: 10px;
+}
+/* Hero Section End */
+
+
+/* Terms Section Start */
+.termsAndConditions {
+    background: transparent;
+}
+  
+.checkBoxLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: small;
+    color: #E8EAF0;
+    background: transparent;
+}
+  
+.checkBoxInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.checkBoxCustom {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E8EAF0;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+  
+.checkBoxCustom:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+  
+.checkBoxInput:checked + .checkBoxCustom:before {
+    background-color: aqua;
+}
+
+.checkBoxText {
+    font-weight: 400;
+    background: transparent;
+}
+    
+.term {
+    color: aqua;
+    text-decoration: none;
+    background: transparent;
+}
+
+.term:hover {
+    text-decoration: underline;
 }
