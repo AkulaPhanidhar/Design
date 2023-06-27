@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Rubik:wght@300;400;500;600&family=Work+Sans:wght@300;400;500;600&display=swap');
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  background: #0E1014;
-  font-family: 'Rubik', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #0E1014;
+    font-family: 'Rubik', sans-serif;
 }
 
 
@@ -16,7 +16,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +79,7 @@
 }
 
 .button {
-    padding: 13px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,11 +305,58 @@
     padding: 30px 100px;
 }
 
-.heroContainer {
-    width: 100%;
-    height: 70vh;
+.upperContainer {
+    height: 80vh;
+    border-radius: 20px;
     background: #13151d;
-    border-radius: 10px;
+}
+
+.heroContainer {
+    padding: 100px;
+    width: 100%;
+    height: 100%;
+    background: #111318;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.line1 {
+    color: #E8EAF0;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+.subLine {
+    background: transparent;
+}
+
+.subLine2 {
+    color: aqua;
+    letter-spacing: 1px;
+    background: transparent;
+}
+
+.subLine3 {
+    color: #F64377;
+    font-size: 60px;
+    background: transparent;
+}
+
+.line2 {
+    width: 60%;
+    color: #E8EAF0;
+    font-size: medium;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: justify;
+    background: transparent;
 }
 /* Hero Section End */
 
