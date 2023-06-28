@@ -308,15 +308,19 @@
 .upperContainer {
     height: 80vh;
     border-radius: 20px;
-    background: #13151d;
+    /* background: #111318; */
+    background: #0c0c0c;
 }
 
 .heroContainer {
     padding: 100px;
     width: 100%;
     height: 100%;
-    background: #111318;
     border-radius: 20px;
+    background: url('./Images/Hero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -422,3 +426,58 @@
     text-decoration: underline;
 }
 /* Terms Section End */
+
+
+/* Services Section Start */
+.services {
+    padding: 30px 100px;
+}
+
+.title {
+    padding: 30px 0px;
+    color: aqua;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    background: transparent;
+}
+
+.servicesBox {
+    margin-top: 50px;
+    padding: 50px 100px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: #13151d;
+}
+
+.servicesTitle {
+    width: 100%;
+    color: #F64377;
+    font-size: xx-large;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: start;
+    background: transparent;
+}
+
+.servicesLine {
+    height: 1px;
+    width: 100%;
+    background: #E8EAF0;
+    border-radius: 10px;
+}
+
+.servicesDescription {
+    color: #E8EAF0;
+    font-size: small;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: justify;
+    background: transparent;
+}
